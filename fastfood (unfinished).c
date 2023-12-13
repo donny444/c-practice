@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <conio.h>
+#include <string.h>
+
 main()
 {
 	int ham,sid,dri;
-	char fin,nic;
+	char fin[] = "",nic[] = "";
 	printf("Welcome to MacoLo FastFood\n");
 	printf("Please enter your nickname(10 letters) : ");
 	scanf("%s",&nic);
@@ -25,22 +27,11 @@ main()
 	printf("Drinking Number : %d\n",dri);
 	printf("Please confirm your order (yes/no) : ");
 	scanf("%s", &fin);
-	/*
-	switch(fin)
-	{
-		case "yes":
-			printf("Thank you %s",nic);
-			break;
-		case "no":
-			printf("Goodbyes %s",nic);
-			break;
-	}
-	*/
-	if(fin=="yes")
+	if(!(strcmp(fin, "yes")))
 	{
 		printf("Thank you %s",nic);
 	}
-	else if(fin=="no")
+	else if(!(strcmp(fin, "no")))
 	{
 		printf("Goodbyes");
 	}
